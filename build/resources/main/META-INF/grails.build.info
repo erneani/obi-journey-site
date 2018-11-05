@@ -1,0 +1,6 @@
+#Fri, 02 Nov 2018 00:27:48 -0300
+
+info.app.version=0.1
+info.app.name=obi-journey-site
+grails.env=production
+info.app.grailsVersion=3.3.5
