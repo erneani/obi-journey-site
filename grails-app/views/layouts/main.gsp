@@ -19,21 +19,29 @@
 
     <nav class="main-nav">
         <div class="nav-logo">
-            <img src="#" alt="Nav Logo Image" class="nav-logo-img" />
+            <div class="nav-logo-wrapper">
+                <asset:image src="eu2.jpg"/>
+            </div>
+            <span class="between-bar"></span>
+            <div class="nav-logo-header">
+                <h6 class="logo-header">
+                    OBI Journey
+                </h6>
+            </div>
         </div>
         <div class="nav-list">
             <ul>
                 <li class="nav-list-element">
-                <a href="#">Home</a>
+                <a class="commom-button" href="#">Home</a>
                 </li>
                 <li class="nav-list-element">
-                <a href="#">About</a>
+                <a class="commom-button" href="#">About</a>
                 </li>
                 <li class="nav-list-element">
-                <a href="#">Journey</a>
+                <a class="commom-button" href="#">Journey</a>
                 </li>
                 <li class="nav-list-element">
-                <a href="#">Lalala</a>
+                <a class="call-button" href="#">Login</a>
                 </li>
             </ul>
         </div>
