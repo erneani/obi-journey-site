@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails:grails-spring:3.3.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-spring/3.3.5/e02606d3c5442b947ea0b154e9355fca11f804ed/grails-spring-3.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-spring/3.3.5/47c9f88d7d8e3f328efa60ef08a5438d05dc33fb/grails-spring-3.3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
