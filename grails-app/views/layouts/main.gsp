@@ -20,7 +20,7 @@
     <nav class="main-nav">
         <div class="nav-logo">
             <div class="nav-logo-wrapper">
-                <asset:image src="eu2.jpg"/>
+                <asset:image src="eu2.jpg" class="logo-image"/>
             </div>
             <span class="between-bar"></span>
             <div class="nav-logo-header">

@@ -15,14 +15,26 @@
 */
 
 .main-nav {
+	width: 100%;
+	position: fixed;
 	height: 7.5rem;
-    background: #FFF8F0;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 
 	.nav-logo {
 		margin: auto 2rem;
+		display: inline-flex;
+		flex-direction: row;
+
+		.logo-image {
+			height: 4rem;
+			border-radius: 100%;
+		}
+
+		.nav-logo-header {
+			margin: auto 1rem;
+		}
 	}
 
 	.nav-list {
@@ -71,5 +83,31 @@
 				}
   		    }
 		}
+	}
+}
+
+.nav-scrolled {
+    background: #FFF8F0;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+    height: 6rem;
+}
+
+.hero-background {
+	background-image: url("../images/mountain.png");
+	height: 100%;
+	background-position: center center;
+
+	.main-title{
+		margin: 0 auto;
+    	text-align: center
+	}
+
+	.main-subtitle{
+		margin: 0 auto;
+    	text-align: center
+	}
+	.main-button{
+		margin: 0 auto;
+    	text-align: center
 	}
 }
