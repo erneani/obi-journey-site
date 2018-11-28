@@ -111,3 +111,40 @@
     	text-align: center
 	}
 }
+
+.our-services {
+	height: 400px;
+    background-color: #FF8A05;
+    padding: 20px;
+    margin: auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+	.card {
+		margin: auto;
+    	padding: 40px;
+    	border: 2px dashed #fff;
+    	max-height: 95%;
+    	max-width: 95%;
+    	border-radius: 100%;
+
+    	.card-image-wrapper {
+    		text-align: center;
+		    font-size: 5rem;
+		    color: #fff;
+		    text-transform: uppercase;
+		    font-weight: 300;
+		    font-family: "Open sans", sans-serif;
+		    padding: 30px;
+    	}
+
+    	.card-label {
+		    font-size: 1.3rem;
+		    color: #fff;
+		    text-transform: uppercase;
+		    font-weight: 300;
+		    font-family: "Open sans", sans-serif;
+		    text-align: center;
+		}
+    }
+}

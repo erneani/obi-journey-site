@@ -16,5 +16,39 @@
 			<a href="" class="main-button">DISCOVER US</a>
 		</div>
 	</div>
+	<div class="our-services">
+		<div class="card">
+			<div class="card-image-wrapper">
+				<i class="fas fa-lightbulb"></i>
+			</div>
+			<div class="card-label">
+				Inovação
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<i class="fas fa-graduation-cap"></i>
+			</div>
+			<div class="card-label">
+				Desenvolva suas habilidades
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<i class="fas fa-globe-africa"></i>
+			</div>
+			<div class="card-label">
+				Preparado para ensinar. Em qualquer lugar.
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image-wrapper">
+				<i class="fas fa-lock-open"></i>
+			</div>
+			<div class="card-label">
+				Totalmente gratuito
+			</div>
+		</div>
+	</div>
 </body>
 </html>
