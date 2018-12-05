@@ -13,17 +13,37 @@
 *= require mobile
 *= require_self
 */
+.call-button {
+	color: #47d247;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75rem 2rem;
+    border: 2px solid linear-gradient(left, #47d247, #28a428);
+    transition: all 0.25s;
+	border-radius: 20px;
+	max-width: 300px;
+	text-align: center;
+
+    &:hover {
+    	color: #fff;
+    	background-color: #47d247;
+    	box-shadow: 0px 0px 0px #47d247;
+    }
+}
 
 .main-nav {
 	width: 100%;
 	position: fixed;
 	height: 7.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 
 	.nav-logo {
-		margin: auto 2rem;
+		margin: auto 0;
 		display: inline-flex;
 		flex-direction: row;
 
@@ -38,7 +58,7 @@
 	}
 
 	.nav-list {
-		margin: auto 2rem;
+		margin: auto 0;
 
 		ul {
 			list-style: none;
@@ -48,37 +68,18 @@
 				margin: 0 0.50rem;
 
 				.commom-button {
-				    color: #533A71;
+				    color: #FFF;
 				    font-family: sans-serif;
 				    font-size: 1rem;
 				    font-weight: 600;
 				    text-decoration: none;
 				    text-transform: uppercase;
 				    padding: 0.75rem 1rem;
-				    transition: all 0.7s;
+				    transition: ease-in 0.25s;
+				    border-bottom: 1px solid transparent;
 
 				    &:hover {
-				    	color: #FFF8F0;
-				    	background-color: #FF8A05;
-				    }
-				}
-
-				.call-button {
-					color: #533A71;
-				    font-family: sans-serif;
-				    font-size: 1rem;
-				    font-weight: 600;
-				    text-decoration: none;
-				    text-transform: uppercase;
-				    padding: 0.75rem 2rem;
-				    border: 2px solid #533A71;
-				    box-shadow: 3px 3px 0px #533A71;
-				    transition: all 0.7s;
-
-				    &:hover {
-				    	color: #FFF8F0;
-				    	background-color: #533A71;
-				    	box-shadow: 0px 0px 0px #533A71;
+				    	border-bottom: 2px solid #47d247;
 				    }
 				}
   		    }
@@ -93,58 +94,38 @@
 }
 
 .hero-background {
-	background-image: url("../images/mountain.png");
-	height: 100%;
+	background-image: url("../images/crianca-feliz.jpg");
+	height: auto;
 	background-position: center center;
 
-	.main-title{
-		margin: 0 auto;
-    	text-align: center
-	}
+	.hero-background-filter {
+		background-color: rgba(0,0,0,0.5);
+		display: flex;
+		flex-direction: column;
+		margin: auto auto;
 
-	.main-subtitle{
-		margin: 0 auto;
-    	text-align: center
-	}
-	.main-button{
-		margin: 0 auto;
-    	text-align: center
-	}
-}
+		.hero-text {
+			margin: auto auto;
+			text-align: center;
+			padding: 20rem;
 
-.our-services {
-	height: 400px;
-    background-color: #FF8A05;
-    padding: 20px;
-    margin: auto 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+			.hero-title{
+		    	color: #fff;
+		    	font-size: 48px;
+		    	margin: 50px 0;
+			}
 
-	.card {
-		margin: auto;
-    	padding: 40px;
-    	border: 2px dashed #fff;
-    	max-height: 95%;
-    	max-width: 95%;
-    	border-radius: 100%;
+			.hero-subtitle{
+				font-size: 24px;
+				color: rgba(255,255,255,0.75);
+				margin-bottom: 75px;
+				margin-top: 25px;
+			}
 
-    	.card-image-wrapper {
-    		text-align: center;
-		    font-size: 5rem;
-		    color: #fff;
-		    text-transform: uppercase;
-		    font-weight: 300;
-		    font-family: "Open sans", sans-serif;
-		    padding: 30px;
-    	}
-
-    	.card-label {
-		    font-size: 1.3rem;
-		    color: #fff;
-		    text-transform: uppercase;
-		    font-weight: 300;
-		    font-family: "Open sans", sans-serif;
-		    text-align: center;
+			.hero-call-button {
+				font-size: 18px;
+				margin-top: 100px 0;
+			}
 		}
-    }
+	}
 }
