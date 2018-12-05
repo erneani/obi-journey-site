@@ -21,7 +21,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.75rem 2rem;
-    border: 2px solid linear-gradient(left, #47d247, #28a428);
+    border: 2px solid #47d247;
     transition: all 0.25s;
 	border-radius: 20px;
 	max-width: 300px;
@@ -29,8 +29,7 @@
 
     &:hover {
     	color: #fff;
-    	background-color: #47d247;
-    	box-shadow: 0px 0px 0px #47d247;
+    	background-color: #47d247; 
     }
 }
 
@@ -97,6 +96,7 @@
 	background-image: url("../images/crianca-feliz.jpg");
 	height: auto;
 	background-position: center center;
+	background-attachment: fixed;
 
 	.hero-background-filter {
 		background-color: rgba(0,0,0,0.5);
@@ -128,4 +128,9 @@
 			}
 		}
 	}
+}
+
+.our-services {
+	height: 100rem;
+	width: 100%;
 }
