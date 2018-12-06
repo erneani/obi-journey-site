@@ -13,9 +13,7 @@
 if (typeof jQuery !== 'undefined') {
     (function($) {
         $(document).ajaxStart(function() {
-            $('#spinner').fadeIn();
-        }).ajaxStop(function() {
-            $('#spinner').fadeOut();
+            console.log("I am working");
         });
     })(jQuery);
 }
