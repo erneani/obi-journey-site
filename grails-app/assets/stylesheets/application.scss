@@ -53,6 +53,27 @@
 	}
 }
 
+.shadow-buttom {
+	background-color: $color-secondary-light;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-family: $font-family-base;
+	font-weight: $font-weight-bold;
+	text-align: center;
+	font-size: $font-size-large;
+	padding: .75rem 1rem;
+	color: $color-white;
+	box-shadow: 0 0 20px $color-black;
+	transition: ease-in $transition-duration;
+
+	&:hover {
+		box-shadow: 0 0 3px $color-black;
+		background-color: $color-secondary;
+		color: $color-white;
+	}
+}
+
 .main-nav {
 	width: 100%;
 	position: fixed;
@@ -143,7 +164,7 @@
 			}
 
 			.hero-call-button {
-				font-size: 18px;
+				font-size: $font-size-large;
 				margin-top: 100px 0;
 			}
 		}
@@ -178,10 +199,75 @@
 		}
 
 		.service-card-description {
-			font-size: 16px;
+			font-size: $font-size-medium;
 			margin: 15px auto;
 			width: 80%;
 			color: $color-black;
 		}
+	}
+}
+
+.exams {
+	background-color: $color-blue-light;
+	text-align: center;
+	height: auto;
+
+	.exams-title {
+		font-family: $font-family-base;
+		font-weight: $font-weight-bold;
+		font-size: $font-size-title;
+		color: $color-white;
+	}
+
+	.exams-description {
+		font-family: $font-family-base;
+		font-weight: $font-weight-light;
+		font-size: $font-size-large;
+		color: $color-white;
+	}
+}
+
+.what-we-do {
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	display: flex;
+	margin: 0 auto;
+	width: 90%;
+
+	.what-we-do-card {
+		justify-content: space-around;
+		flex-direction: row;
+		font-family: $font-family-base;
+		display: inline-flex;
+		margin: 3rem 0;
+		color: $color-black;
+
+		.what-we-do-card-content-wrapper {
+	    justify-content: space-around;
+	    flex-direction: column;
+			display: flex;
+			margin: 0 3rem;
+
+			.what-we-do-card-title {
+				font-weight: $font-weight-bold;
+				font-size: $font-size-title;
+				margin: 1rem 0;
+			}
+
+			.what-we-do-card-text {
+				font-weight: $font-weight-light;
+				font-size: $font-size-large;
+				margin: 1rem 0;
+			}
+
+			.what-we-do-card-buttom {
+				margin-top: 3rem;
+			}
+		}
+	}
+
+	.what-we-do-card:nth-child(even) {
+		flex-direction: row-reverse;
 	}
 }
