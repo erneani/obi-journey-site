@@ -7,6 +7,7 @@ class Usuario {
 	int nivel
 	BigInteger experiencia
 	int caminho
+    String senha
 
     static constraints = {
     id(nullable: false, blank:false, unique:true)
@@ -15,5 +16,6 @@ class Usuario {
     nivel(nullable:false, blank:false)
     experiencia(nullable:false, blank:false)
     caminho(nullable:false, blank:false)
+    senha(nullabe:false, blank:false, unique:true)
     }
 }

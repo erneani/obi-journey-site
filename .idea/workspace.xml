@@ -3,11 +3,28 @@
   <component name="ChangeListManager">
     <list default="true" id="9b7e4b14-f17a-4557-850e-341dccdf9db9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/3.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/fileSnapshots.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/3.5/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$CaminhoServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$CaminhoServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$EstagioServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$EstagioServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$GerenteServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$GerenteServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$Gerente_conteudoServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$Gerente_conteudoServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$ProvaServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$ProvaServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$UsuarioServiceImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/$UsuarioServiceImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Caminho.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Caminho.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/CaminhoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/CaminhoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Estagio.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Estagio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/EstagioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/EstagioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/GerenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/GerenteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente_conteudo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente_conteudo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente_conteudoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Gerente_conteudoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Prova.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Prova.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/ProvaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/ProvaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Usuario$__clinit__closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Usuario$__clinit__closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/main/obi/journey/site/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/main/obi/journey/site/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grails-app/domain/obi/journey/site/Usuario.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/grails-app/domain/obi/journey/site/Usuario.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -69,7 +86,7 @@
       <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/application.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-839">
+            <state relative-caret-position="153">
               <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
@@ -451,7 +468,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6166123413544" />
+        <entry key="$PROJECT_DIR$" value="6176143909981" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2812445804" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="983622876" />
@@ -821,6 +838,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -870,12 +889,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../teste/obi-journey-site" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -978,19 +995,19 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32817337" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32817337" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2730711" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27760968" />
       <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1004,6 +1021,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1069,7 +1103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-839">
+        <state relative-caret-position="153">
           <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
         </state>
       </provider>

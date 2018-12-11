@@ -100,7 +100,7 @@ environments:
     development:
         dataSource:
             dbCreate: create
-            url: jdbc:mysql://localhost:3306/concot
+            url: jdbc:mysql://localhost:3306/satobi
     test:
         dataSource:
             dbCreate: update

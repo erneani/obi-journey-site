@@ -18,6 +18,20 @@ class UsuarioController {
         respond usuarioService.get(id)
     }
 
+    def login() {
+        def usuario = Usuario.findByNome(params.nome)
+        def senha = Usuario.findByNome(params.senha)
+
+        if (usuario && senha){
+            session.usuario=usuario
+            redirect(controller: 'usuario', action: 'index')
+        }else{
+            flash.message = g.message(code: 'login.error.message')
+            flash.error = true
+            render view: '/login', model: [active: 'usuario']
+        }
+    }
+
     def create() {
         respond new Usuario(params)
     }
