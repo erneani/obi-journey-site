@@ -174,7 +174,7 @@
 .our-services {
 	height: auto;
 	width: 100%;
-	padding: 2rem;
+	padding: 8rem 2rem;
 	display: inline-flex;
 	justify-content: center;
 
@@ -269,5 +269,61 @@
 
 	.what-we-do-card:nth-child(even) {
 		flex-direction: row-reverse;
+	}
+}
+
+.call-box-section {
+	background-color: $color-blue-dark;
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+	font-family: $font-family-base;
+	font-weight: $font-weight-normal;
+	color: $color-white;
+
+	.call-box-section-title {
+		text-transform: uppercase;
+		font-weight: $font-weight-bold;
+		font-size: $font-size-title;
+	}
+
+	.call-boxes {
+		justify-content: center;
+		text-align: center;
+		display: inline-flex;
+		width: 100%;
+
+		.call-box {
+			background-color: $color-blue;
+			overflow: hidden;
+			height: auto;
+			width: 100%;
+			text-align: center;
+			padding: 2rem;
+
+			.call-box-image-wrapper {
+				img {
+					max-width: 150px;
+				}
+			}
+
+			.call-box-content-wrapper {
+				.call-box-title {
+					font-size: $font-size-extra;
+				}
+
+				.call-box-list {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					font-size: $font-size-large;
+					list-style-type: none;
+				}
+			}
+
+			& + .call-box {
+				border-left: 2px solid $color-blue-light;
+			}
+		}
 	}
 }
