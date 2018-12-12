@@ -7,6 +7,7 @@ $color-secondary:             #3333aa;
 $color-secondary-light:       #5c5cce;
 
 $color-white:                 #fff;
+$color-gray-light:            #ccc;
 $color-black:                 #363636;
 $color-blue-light:            #4db9ff;
 $color-blue:                  #202081;
@@ -30,3 +31,103 @@ $font-weight-bold:            600;
 
 
 $transition-duration:         0.25s;
+$transition-duration-slow:    0.60s;
+
+/* MIXINS */
+
+@mixin normalizeFont($size, $weight, $color) {
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-base;
+  color: #fff;
+  @if $size {
+    font-size: $size;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $color {
+    color: $color;
+  }
+}
+
+@mixin centralizeComponent() {
+  margin: auto auto;
+}
+/* COMPONENTS */
+
+.commom-button {
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    transition: ease-in 0.25s;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $color-primary;
+      border-bottom: 2px solid #33cd33;
+    }
+}
+
+.call-button {
+	color: $color-primary;
+  font-family: sans-serif;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  border: 2px solid #33cd33;
+  transition: all $transition-duration;
+	border-radius: 20px;
+	max-width: 300px;
+	text-align: center;
+
+  &:hover {
+  	color: $color-white;
+  	background-color: $color-primary;
+  }
+}
+
+.simple-button {
+	background-color: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-weight: 600;
+	transition: ease-out $transition-duration;
+	padding: .75rem 1rem;
+	cursor: pointer;
+	border: 2px solid $color-secondary;
+	color: $color-secondary;
+
+	&:hover {
+		background-color: #3333aa;
+		color: #fff;
+	}
+}
+
+.shadow-buttom {
+	background-color: $color-secondary-light;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-family: $font-family-base;
+	font-weight: $font-weight-bold;
+	text-align: center;
+	font-size: $font-size-large;
+	padding: .75rem 1rem;
+	color: $color-white;
+	box-shadow: 0 0 5px $color-black;
+	transition: ease-in $transition-duration;
+
+	&:hover {
+		box-shadow: 0 0 3px $color-black;
+		background-color: $color-secondary;
+		color: $color-white;
+	}
+}

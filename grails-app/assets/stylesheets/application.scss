@@ -13,66 +13,9 @@
 *= require mobile
 *= require_self
 */
+//The sections above bring normalizers for the CSS 
+
 @import './variables';
-
-.call-button {
-	color: $color-primary;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.75rem 2rem;
-  border: 2px solid #33cd33;
-  transition: all $transition-duration;
-	border-radius: 20px;
-	max-width: 300px;
-	text-align: center;
-
-  &:hover {
-  	color: $color-white;
-  	background-color: $color-primary;
-  }
-}
-
-.simple-button {
-	background-color: transparent;
-	text-decoration: none;
-	text-transform: uppercase;
-	border-radius: 3px;
-	font-weight: 600;
-	transition: ease-out $transition-duration;
-	padding: .75rem 1rem;
-	cursor: pointer;
-	border: 2px solid $color-secondary;
-	color: $color-secondary;
-
-	&:hover {
-		background-color: #3333aa;
-		color: #fff;
-	}
-}
-
-.shadow-buttom {
-	background-color: $color-secondary-light;
-	text-decoration: none;
-	text-transform: uppercase;
-	border-radius: 3px;
-	font-family: $font-family-base;
-	font-weight: $font-weight-bold;
-	text-align: center;
-	font-size: $font-size-large;
-	padding: .75rem 1rem;
-	color: $color-white;
-	box-shadow: 0 0 20px $color-black;
-	transition: ease-in $transition-duration;
-
-	&:hover {
-		box-shadow: 0 0 3px $color-black;
-		background-color: $color-secondary;
-		color: $color-white;
-	}
-}
 
 .main-nav {
 	width: 100%;
@@ -102,27 +45,11 @@
 
 		ul {
 			list-style: none;
-  		    display: inline-flex;
+	    display: inline-flex;
 
-  		    .nav-list-element {
+	    .nav-list-element {
 				margin: 0 0.50rem;
-
-				.commom-button {
-				    color: #FFF;
-				    font-family: sans-serif;
-				    font-size: 1rem;
-				    font-weight: 600;
-				    text-decoration: none;
-				    text-transform: uppercase;
-				    padding: 0.75rem 1rem;
-				    transition: ease-in 0.25s;
-				    border-bottom: 1px solid transparent;
-
-				    &:hover {
-				    	border-bottom: 2px solid #33cd33;
-				    }
-				}
-  		    }
+	    }
 		}
 	}
 }

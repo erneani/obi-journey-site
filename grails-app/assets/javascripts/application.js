@@ -12,8 +12,10 @@
 
 if (typeof jQuery !== 'undefined') {
     (function($) {
-        $(document).ajaxStart(function() {
-            console.log("I am working");
+        $(document).ready(function() {
+            $(window).scroll(function() {
+              console.log("Working");
+            })
         });
     })(jQuery);
 }

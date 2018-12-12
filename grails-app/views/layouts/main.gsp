@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <asset:javascript src="application.js" />
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
@@ -34,16 +35,16 @@
         <div class="nav-list">
             <ul>
                 <li class="nav-list-element">
-                <a class="commom-button" href="#">Home</a>
+                  <a class="commom-button" href="#">Home</a>
                 </li>
                 <li class="nav-list-element">
-                <a class="commom-button" href="#">About</a>
+                  <a class="commom-button" href="#">About</a>
                 </li>
                 <li class="nav-list-element">
-                <a class="commom-button" href="#">Journey</a>
+                  <a class="commom-button" href="#">Journey</a>
                 </li>
                 <li class="nav-list-element">
-                <a class="call-button" href="#">Login</a>
+                  <g:link controller="usuario" action="login" class="call-button">Login</g:link>
                 </li>
             </ul>
         </div>

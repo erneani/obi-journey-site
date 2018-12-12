@@ -3,6 +3,7 @@ package obi.journey.site
 class Estagio {
 	int id_estagio
 	String nome
+	static belongsTo = usuario
 
     static constraints = {
     	id_estagio(nullable:false, blank:false, unique:true)
