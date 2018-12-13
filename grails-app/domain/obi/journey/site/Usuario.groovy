@@ -6,7 +6,7 @@ class Usuario {
 	String email
 	BigInteger experiencia
 	int caminho
-  String senha
+  	String senha
 	static hasOne = [nivel: Estagio]
 	String sexo
 	String ocupacao

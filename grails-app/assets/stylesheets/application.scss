@@ -13,7 +13,7 @@
 *= require mobile
 *= require_self
 */
-//The sections above bring normalizers for the CSS 
+//The sections above bring normalizers for the CSS
 
 @import './variables';
 
@@ -248,6 +248,39 @@
 
 			& + .call-box {
 				border-left: 2px solid $color-blue-light;
+			}
+		}
+	}
+}
+
+.footer-base {
+	background-color: $color-white;
+	justify-content: center;
+	flex-direction: row;
+	padding: 3rem 1rem;
+	display: flex;
+
+	.footer-column {
+
+		.footer-list-header {
+			@include normalizeFont($font-size-extra, $font-weight-bold, $color-black);
+			text-align: center;
+			margin: 1rem 0;
+		}
+
+		.footer-list {
+			@include normalizeFont($font-size-large, $font-weight-bold, $color-black);
+			padding: .75rem 1rem;
+
+			.footer-list-element {
+				text-decoration: underline transparent dashed;
+				transition: $transition-duration all;
+				color: $color-black;
+
+				&:hover {
+					text-decoration: underline $color-blue-light dashed;
+					color: $color-blue-light;
+				}
 			}
 		}
 	}

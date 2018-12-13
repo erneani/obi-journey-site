@@ -13,9 +13,11 @@
 if (typeof jQuery !== 'undefined') {
     (function($) {
         $(document).ready(function() {
-            $(window).scroll(function() {
-              console.log("Working");
-            })
+          $('.exams-carousel').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          });
         });
     })(jQuery);
 }
