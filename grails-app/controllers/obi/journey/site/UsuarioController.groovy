@@ -10,7 +10,19 @@ class UsuarioController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def login() {
-      respond new Usuario(params)
+      def usuario = Usuario.findByEmail(params.email);
+
+      if(usuario) {
+        if (usuario.senha == params.senha) {
+            session.usuario = usuario;
+            respond usuario, [view: '/index']
+            return
+        } else {
+            respond usuario, [view: '/login', model: [message : 'alguma coisa']]
+        }
+
+        
+      }
     }
 
     def checkLogin() {
@@ -56,6 +68,11 @@ class UsuarioController {
         }
 
         try {
+            def estagio = new Estagio(nome: 'Iniciante')
+            estagio = estagio.save()
+            println estagio.properties
+            usuario.nivel = estagio
+            println usuario.properties
             usuarioService.save(usuario)
         } catch (ValidationException e) {
             respond usuario.errors, view:'create'

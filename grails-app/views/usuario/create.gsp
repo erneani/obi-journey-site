@@ -8,7 +8,7 @@
         <div class="hero">
           <h1 class="hero-title">Cadastrar-se</h1>
         </div>
-        <g:form resource="${this.usuario}" method="POST" action="save">
+        <g:form controller="usuario" method="POST" action="save">
           <fieldset class="form">
             <div class="form-group">
               <label for="nome" class="form-label">Nome</label>
@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
               <label for="ocupation" class="form-label">Qual a sua ocupação?</label>
-              <select class="form-input-block" name="ocupation">
+              <select class="form-input-block" name="ocupacao">
                 <option value="not-selected" selected>Selecione uma opção</option>
                 <option value="dev">Desenvolvedor</option>
                 <option value="student">Estudante</option>

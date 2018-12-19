@@ -1,11 +1,10 @@
 package obi.journey.site
 
 class Usuario {
-	int id
 	String nome
 	String email
-	BigInteger experiencia
-	int caminho
+	BigInteger experiencia = new BigInteger(0)
+	int caminho = 1
   	String senha
 	static hasOne = [nivel: Estagio]
 	String sexo
