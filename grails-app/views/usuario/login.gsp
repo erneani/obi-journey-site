@@ -9,7 +9,7 @@
     <div class="hero">
       <h1 class="hero-title">Conectar-se</h1>
     </div>
-    <g:form resource="${this.usuario}" method="POST" action="index">
+    <g:form controller="usuario" method="POST" action="login">
       <fieldset class="form">
         <div class="form-group">
           <label for="email" class="form-label">Email</label>

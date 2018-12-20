@@ -8,7 +8,7 @@
         <div class="hero">
           <h1 class="hero-title">Cadastrar-se</h1>
         </div>
-        <g:form resource="${this.usuario}" method="POST" action="save">
+        <g:form controller="usuario" method="POST" action="save">
           <fieldset class="form">
             <div class="form-group">
               <label for="nome" class="form-label">Nome</label>
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="ocupation" class="form-label">Qual a sua ocupação?</label>
+              <label for="ocupacao" class="form-label">Qual a sua ocupação?</label>
               <select class="form-input-block" name="ocupation">
                 <option value="not-selected" selected>Selecione uma opção</option>
                 <option value="dev">Desenvolvedor</option>
@@ -47,6 +47,9 @@
                 <option value="hobby">Hobby</option>
               </select>
             </div>
+            <g:hiddenField name="caminho" value="1" />
+            <g:hiddenField name="experiencia" value="1" />
+            <g:hiddenField name="nivel" value="1" />
             <div class="form-group">
               <g:submitButton name="create-user" class="submit-button" value="Cadastrar"/>
             </div>
