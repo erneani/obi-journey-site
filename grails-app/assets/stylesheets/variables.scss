@@ -17,13 +17,13 @@ $color-green-dark:            #239023;
 
 $font-family-base:            'Open sans', sans-serif;
 
-$font-size-tiny:              toRem(10px);        //10px
-$font-size-small:             toRem(12px);        //12px
-$font-size-base:              toRem(14px);        //14px
-$font-size-medium:            toRem(16px);        //16px
-$font-size-large:             toRem(18px);        //18px
-$font-size-extra:             toRem(22px);        //22px
-$font-size-title:             toRem(36px);        //36px
+$font-size-tiny:              10px;        //10px
+$font-size-small:             12px;        //12px
+$font-size-base:              14px;        //14px
+$font-size-medium:            16px;        //16px
+$font-size-large:             18px;        //18px
+$font-size-extra:             22px;        //22px
+$font-size-title:             36px;        //36px
 
 $font-weight-light:           300;
 $font-weight-normal:          400;
@@ -87,6 +87,7 @@ $transition-duration-slow:    0.60s;
 
 .call-button {
 	@include normalizeFont($font-size-medium,$font-weight-bold,$color-primary);
+	@extend %button;
 	padding: 0.75rem 2rem;
 	border: 2px solid $color-primary;
 	border-radius: 20px;
@@ -111,6 +112,7 @@ $transition-duration-slow:    0.60s;
 
 .shadow-buttom {
 	@include normalizeFont($font-size-large,$font-weight-bold,$color-white);
+	@extend %button;
 	background-color: $color-secondary-light;
 	border-radius: 3px;
 	box-shadow: 0 0 5px $color-black;
@@ -120,4 +122,54 @@ $transition-duration-slow:    0.60s;
 		background-color: $color-secondary;
 		color: $color-white;
 	}
+}
+
+.form {
+  .form-group {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+
+    .form-label, .form-input-block, .radio-button-group {
+      @include centralizeComponent();
+      @include normalizeFont($font-size-base, $font-weight-normal, $color-black);
+      width: 70%;
+    }
+
+    .form-label {
+      font-size: $font-size-medium;
+      font-weight: bold;
+    }
+
+    .form-input-block {
+      border-radius: 5px;
+      transition: $transition-duration;
+      padding: .75rem 1rem;
+      border: 2px solid $color-gray-light;
+
+      &:hover {
+        border: 2px solid $color-blue-light;
+      }
+
+      &:focus {
+        border: 2px solid $color-blue-light;
+      }
+    }
+
+    .submit-button {
+      @include centralizeComponent();
+      @include normalizeFont($font-size-large, $font-weight-bold, $color-blue-light);
+      border-radius: 5px;
+      background-color: transparent;
+      transition: $transition-duration-slow all;
+      padding: .75rem 1rem;
+      border: 2px solid $color-blue-light;
+      width: 70%;
+
+      &:hover {
+        background-color: $color-blue-light;
+        color: #fff;
+      }
+    }
+  }
 }

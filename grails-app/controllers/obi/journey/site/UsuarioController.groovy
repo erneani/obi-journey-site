@@ -69,9 +69,10 @@ class UsuarioController {
         }
 
         try {
-            def estagio = new Estagio(1)
-            usuario.estagio = estagio
+            println(params)
             usuarioService.save(usuario)
+            respond view:'login'
+            return
         } catch (ValidationException e) {
             respond usuario.errors, view:'create'
             return
