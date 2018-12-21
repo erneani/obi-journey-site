@@ -10,7 +10,12 @@ class UsuarioController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def login() {
-      def usuario = Usuario.findByEmail(params.nome)
+        render view:'login'
+    }
+
+    def checkLogin() {
+        println("Chcked")
+      def usuario = Usuario.findByEmail(params.email)
       def senha = Usuario.findByEmail(params.senha)
 
       if(usuario) {
@@ -21,13 +26,9 @@ class UsuarioController {
           }
           else {
               println("Login failed")
-              render view:'/login'
+              render view:'login', model:["message":"Erro"]
           }
       }
-    }
-
-    def checkLogin() {
-      redirect(view: 'index', controller: 'usuario')
     }
 
     def index(Integer max) {
@@ -71,9 +72,12 @@ class UsuarioController {
         try {
             println(params)
             usuarioService.save(usuario)
-            respond view:'login'
+            respond usuario, [view:'login']
             return
         } catch (ValidationException e) {
+            usuario.errors.allErrors.each {
+                println it
+            }
             respond usuario.errors, view:'create'
             return
         }

@@ -7,14 +7,13 @@ class Usuario {
 	BigInteger experiencia
 	int caminho
   	String senha
-	static hasOne = [nivel: Estagio]
 	String sexo
 	String ocupacao
 
     static constraints = {
     nome(nullable:false, blank:false, maxSize: 128)
     email(nullable:false, blank:false, unique:true, email:true)
-    senha(nullabe:false, blank:false, unique:true)
-	 	ocupacao inList: ["Desenvolvedor","Estudante","Professor","Hobby"]
+    senha(nullabe:false, blank:false)
+	ocupacao(nullable: false, blank: false)
     }
 }
