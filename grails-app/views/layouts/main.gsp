@@ -50,11 +50,17 @@
                             <label class="user-info-name">${session.usuario.nome}</label>
                         </g:link>
                     </li>
+                    <li class="nav-list-element">
+                        <g:link controller="usuario" action="logout" class="user-info-box">Sair</g:link>
+                    </li>
                 </g:if>
                 <g:else>
                     <li class="nav-list-element">
-                      <g:link controller="usuario" action="login" class="call-button">Login</g:link>
-                    </li>    
+                      <g:link controller="usuario" action="login" class="call-button">Entrar</g:link>
+                    </li>
+                    <li class="nav-list-element">
+                      <g:link controller="usuario" action="create" class="call-button">Cadastrar</g:link>
+                    </li>      
                 </g:else>
             </ul>
         </div>

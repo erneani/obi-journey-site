@@ -31,6 +31,13 @@ class UsuarioController {
       }
     }
 
+    def logout() {
+        if(session.usuario) {
+            session.usuario = null
+            redirect action:"login", model: [flash.message = "Você saiu!"]
+        }
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond usuarioService.list(params), model:[usuarioCount: usuarioService.count()]

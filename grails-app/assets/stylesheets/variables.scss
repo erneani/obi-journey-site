@@ -34,6 +34,9 @@ $font-weight-bold:            600;
 $transition-duration:         0.25s;
 $transition-duration-slow:    0.60s;
 
+/* Z-INDEX */
+
+$z-force:					  9999;
 /* MIXINS */
 
 @mixin normalizeFont($size, $weight, $color) {
