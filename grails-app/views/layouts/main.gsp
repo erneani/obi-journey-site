@@ -45,8 +45,10 @@
                   <a class="commom-button" href="#">Journey</a>
                 </li>
                 <g:if test="${session.usuario}">
-                    <li class="nav-list-element user-info-box">
-                        "found you"
+                    <li class="nav-list-element">
+                        <g:link controller="usuario" action="index" class="user-info-box">
+                            <label class="user-info-name">${session.usuario.nome}</label>
+                        </g:link>
                     </li>
                 </g:if>
                 <g:else>

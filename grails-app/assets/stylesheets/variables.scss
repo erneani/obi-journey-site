@@ -76,7 +76,7 @@ $transition-duration-slow:    0.60s;
 }
 
 .commom-button {
-	@include normalizeFont($font-size-base,$font-weight-bold,$color-white);
+	@include normalizeFont($font-size-base,$font-weight-bold,$color-black);
 	@extend %button;
     border-bottom: 1px solid transparent;
 
@@ -176,6 +176,23 @@ $transition-duration-slow:    0.60s;
 }
 
 .user-info-box {
+	display: inline-flex;
+	justify-content: center;
 	border: 2px solid $color-blue-light;
 	padding: 10px 15px;
+	text-decoration: none;
+	transition: $transition-duration all;
+
+	&:hover {
+	    background-color: $color-blue-light;
+    }
+
+    &:hover .user-info-name {
+	    color: #fff;
+    }
+
+	.user-info-name {
+		@include normalizeFont($font-size-base,$font-weight-bold, $color-blue-light);
+		transition: $transition-duration all;
+	}
 }
