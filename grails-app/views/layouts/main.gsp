@@ -35,7 +35,8 @@
         <div class="nav-list">
             <ul>
                 <li class="nav-list-element">
-                  <a class="commom-button" href="#">Home</a>
+                  <g:link controller="usuario" action="home" class="commom-button">Home</g:link>
+                  <!--<a class="commom-button" href="#">Home</a>-->
                 </li>
                 <li class="nav-list-element">
                   <a class="commom-button" href="#">About</a>
@@ -43,9 +44,16 @@
                 <li class="nav-list-element">
                   <a class="commom-button" href="#">Journey</a>
                 </li>
-                <li class="nav-list-element">
-                  <g:link controller="usuario" action="login" class="call-button">Login</g:link>
-                </li>
+                <g:if test="${session.usuario}">
+                    <li class="nav-list-element user-info-box">
+                        "found you"
+                    </li>
+                </g:if>
+                <g:else>
+                    <li class="nav-list-element">
+                      <g:link controller="usuario" action="login" class="call-button">Login</g:link>
+                    </li>    
+                </g:else>
             </ul>
         </div>
 

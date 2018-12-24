@@ -14,6 +14,7 @@ $color-blue:                  #202081;
 $color-blue-dark:             #202046;
 $color-green-light:           #5cd75c;
 $color-green-dark:            #239023;
+$color-red-error: 			  #e60000;
 
 $font-family-base:            'Open sans', sans-serif;
 
@@ -172,4 +173,9 @@ $transition-duration-slow:    0.60s;
       }
     }
   }
+}
+
+.user-info-box {
+	border: 2px solid $color-blue-light;
+	padding: 10px 15px;
 }

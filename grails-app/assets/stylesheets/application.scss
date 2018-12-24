@@ -45,11 +45,11 @@
 
 		ul {
 			list-style: none;
-	    display: inline-flex;
+		    display: inline-flex;
 
-	    .nav-list-element {
-				margin: 0 0.50rem;
-	    }
+		    .nav-list-element {
+				margin: auto 0.50rem;
+		    }
 		}
 	}
 }
@@ -283,5 +283,21 @@
 				}
 			}
 		}
+	}
+}
+
+.div-error-message {
+	border: 2px solid $color-red-error;
+	border-radius: 5px;
+	margin: 20px auto;
+	max-width: 500px;
+	justify-content: center;
+	display: flex;
+	padding: 20px;
+
+	.div-error-message-label {
+		font-size: $font-size-large;
+		color: $color-red-error;
+		text-align: center;
 	}
 }

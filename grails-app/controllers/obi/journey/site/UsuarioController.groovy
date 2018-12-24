@@ -16,18 +16,18 @@ class UsuarioController {
     def checkLogin() {
         println("Chcked")
       def usuario = Usuario.findByEmail(params.email)
-      def senha = Usuario.findByEmail(params.senha)
+      def senha = Usuario.findBySenha(params.senha)
 
-      if(usuario) {
-          if(senha == params.senha) {
-              println("login ok")
-              respond view:'/index', model: params
-              return
-          }
-          else {
-              println("Login failed")
-              render view:'login', model:["message":"Erro"]
-          }
+      if(usuario && senha) {
+        println("Login ok")
+
+        session.usuario = usuario
+        redirect(view:'index', model:[usuario: new Usuario(params)])
+      }
+      else {
+        flash.message = "Email ou senha não estão corretos."
+        flash.error = true
+        render view: 'login', model: [active: 'usuario']
       }
     }
 
@@ -142,5 +142,9 @@ class UsuarioController {
             }
             '*'{ render status: NOT_FOUND }
         }
+    }
+
+    def home() {
+        render view:'/index'
     }
 }

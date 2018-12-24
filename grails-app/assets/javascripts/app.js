@@ -1,1 +1,3 @@
-window.onScroll(console.log("I am working baby"));
+document.addEventListener('scroll', function(){
+	console.log(document.pageYOffset)
+});
