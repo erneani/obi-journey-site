@@ -262,7 +262,7 @@
 }
 
 .footer-base {
-	background-color: $color-white;
+	background-color: $color-black;
 	justify-content: center;
 	flex-direction: row;
 	padding: 3rem 1rem;
@@ -283,29 +283,13 @@
 			.footer-list-element {
 				text-decoration: underline transparent dashed;
 				transition: $transition-duration all;
-				color: $color-black;
+				color: $color-blue-light;
 
 				&:hover {
-					text-decoration: underline $color-blue-light dashed;
-					color: $color-blue-light;
+					text-decoration: underline $color-white dashed;
+					color: $color-white;
 				}
 			}
 		}
-	}
-}
-
-.div-error-message {
-	border: 2px solid $color-red-error;
-	border-radius: 5px;
-	margin: 20px auto;
-	max-width: 500px;
-	justify-content: center;
-	display: flex;
-	padding: 20px;
-
-	.div-error-message-label {
-		font-size: $font-size-large;
-		color: $color-red-error;
-		text-align: center;
 	}
 }

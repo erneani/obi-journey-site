@@ -6,16 +6,23 @@
     <asset:stylesheet src="usuario.css" />
   </head>
   <body>
-    <div class="hero">
-      <h1 class="hero-title">Conectar-se</h1>
-    </div>
-    <g:if test="${flash.message}">
+    <g:if test="${flash.error}">
       <div class="div-error-message">
-        <h4 class="div-error-message-label">
+        <h4 class="div-message-label">
+          ${flash.error}
+        </h4>
+      </div>
+    </g:if>
+    <g:if test="${flash.message}">
+      <div class="div-success-message">
+        <h4 class="div-message-label">
           ${flash.message}
         </h4>
       </div>
     </g:if>
+    <div class="hero">
+      <h1 class="hero-title">Conectar-se</h1>
+    </div>
     <g:form controller="usuario" method="POST" action="checkLogin">
       <fieldset class="form">
         <div class="form-group">

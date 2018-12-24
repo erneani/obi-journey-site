@@ -1,13 +1,12 @@
 package obi.journey.site
 
-class Gerente {
-	int id_gerente 
+class Gerente { 
 	String nome
-	int id_conteudo
+	String senha
+	String email
 
     static constraints = {
-    	id_gerente(nullable:false, blank:false, unique:true)
-    	nome(nullable:false, blank:false, maxSize: 128)
-    	id_conteudo(nullable:false, blank:false, unique:true)
+    	nome(nullable:false, blank:false, maxSize:128)
+    	senha(nullabel:false, blank:false, maxSize:28)
     }
 }

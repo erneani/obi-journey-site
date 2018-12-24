@@ -14,7 +14,10 @@ $color-blue:                  #202081;
 $color-blue-dark:             #202046;
 $color-green-light:           #5cd75c;
 $color-green-dark:            #239023;
+$color-green-dark-ho:		  rgba(35,144,35,0.8);
 $color-red-error: 			  #e60000;
+$color-red-error-lo:		  rgba(230,0,0,0.5);
+$color-red-error-ho:		  rgba(230,0,0,0.8);
 
 $font-family-base:            'Open sans', sans-serif;
 
@@ -36,7 +39,7 @@ $transition-duration-slow:    0.60s;
 
 /* Z-INDEX */
 
-$z-force:					  9999;
+$z-force:					  100;
 /* MIXINS */
 
 @mixin normalizeFont($size, $weight, $color) {
@@ -92,7 +95,7 @@ $z-force:					  9999;
 .call-button {
 	@include normalizeFont($font-size-medium,$font-weight-bold,$color-primary);
 	@extend %button;
-	padding: 0.75rem 2rem;
+	padding: 0.5rem 1rem;
 	border: 2px solid $color-primary;
 	border-radius: 20px;
 
@@ -178,24 +181,80 @@ $z-force:					  9999;
   }
 }
 
-.user-info-box {
-	display: inline-flex;
+%info-box {
 	justify-content: center;
-	border: 2px solid $color-blue-light;
-	padding: 10px 15px;
 	text-decoration: none;
+	border-radius: 10px;
 	transition: $transition-duration all;
+	padding: 10px 15px;
+	display: inline-flex;
+	border: 2px solid $color-black;
 
 	&:hover {
-	    background-color: $color-blue-light;
+	    background-color: $color-black;
     }
 
-    &:hover .user-info-name {
+    &:hover .info-name {
 	    color: #fff;
     }
 
-	.user-info-name {
-		@include normalizeFont($font-size-base,$font-weight-bold, $color-blue-light);
+    .info-name {
+		@include normalizeFont($font-size-base,$font-weight-bold, $color-black);
 		transition: $transition-duration all;
 	}
+}
+
+.user-info-box {
+	@extend %info-box;
+	border-color: $color-blue-light;
+
+	&:hover {
+		background-color: $color-blue-light;
+	}
+
+	.info-name {
+		color: $color-blue-light;
+	}
+}
+
+.admin-info-box {
+	@extend %info-box;
+	border-color: $color-primary;
+
+	&:hover {
+		background-color: $color-primary;
+	}
+
+	.info-name {
+		color: $color-primary;
+	}
+}
+
+.admin
+
+%div-message {
+	background-color: $color-black;
+	justify-content: center;
+	position: absolute;
+	z-index: $z-force;
+	display: flex;
+	padding: 20px;
+	margin: 0 auto;
+	width: 100%;
+	top: 5rem;
+
+	.div-message-label {
+		@include normalizeFont($font-size-medium, $font-weight-bold, $color-white);
+		text-align: center;
+	}
+}
+
+.div-error-message {
+	@extend %div-message;
+	background-color: $color-red-error-ho;
+}
+
+.div-success-message {
+	@extend %div-message;
+	background-color: $color-green-dark-ho;
 }

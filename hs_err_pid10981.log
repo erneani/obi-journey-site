@@ -1,0 +1,339 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 536870912 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2743), pid=10981, tid=0x00007f85afc6f700
+#
+# JRE version:  (8.0_191-b12) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.191-b12 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f85a8010000):  JavaThread "Unknown thread" [_thread_in_vm, id=10986, stack(0x00007f85afb70000,0x00007f85afc70000)]
+
+Stack: [0x00007f85afb70000,0x00007f85afc70000],  sp=0x00007f85afc6e570,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xace425]  VMError::report_and_die()+0x2c5
+V  [libjvm.so+0x4deb77]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x67
+V  [libjvm.so+0x90c570]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0x100
+V  [libjvm.so+0x903eaf]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x1f
+V  [libjvm.so+0x988346]  PSVirtualSpace::expand_by(unsigned long)+0x56
+V  [libjvm.so+0x978c6c]  PSOldGen::initialize(ReservedSpace, unsigned long, char const*, int)+0x8c
+V  [libjvm.so+0x2bce5e]  AdjoiningGenerations::AdjoiningGenerations(ReservedSpace, GenerationSizer*, unsigned long)+0x2fe
+V  [libjvm.so+0x9369d2]  ParallelScavengeHeap::initialize()+0x222
+V  [libjvm.so+0xa922ba]  Universe::initialize_heap()+0x16a
+V  [libjvm.so+0xa92593]  universe_init()+0x33
+V  [libjvm.so+0x62f0f0]  init_globals()+0x50
+V  [libjvm.so+0xa74c57]  Threads::create_vm(JavaVMInitArgs*, bool*)+0x257
+V  [libjvm.so+0x6d49ff]  JNI_CreateJavaVM+0x4f
+C  [libjli.so+0x7e74]  JavaMain+0x84
+C  [libpthread.so.0+0x76db]  start_thread+0xdb
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00007f85a8010000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=10986, stack(0x00007f85afb70000,0x00007f85afc70000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 00:32 1323919                            /home/ernani/.sdkman/candidates/java/8.0.191-oracle/bin/java
+00600000-00601000 r--p 00000000 00:32 1323919                            /home/ernani/.sdkman/candidates/java/8.0.191-oracle/bin/java
+00601000-00602000 rw-p 00001000 00:32 1323919                            /home/ernani/.sdkman/candidates/java/8.0.191-oracle/bin/java
+02367000-02388000 rw-p 00000000 00:00 0                                  [heap]
+f0000000-100000000 rw-p 00000000 00:00 0 
+7f8599000000-7f8599270000 rwxp 00000000 00:00 0 
+7f8599270000-7f85a8000000 ---p 00000000 00:00 0 
+7f85a8000000-7f85a8044000 rw-p 00000000 00:00 0 
+7f85a8044000-7f85ac000000 ---p 00000000 00:00 0 
+7f85ac233000-7f85ac4c6000 rw-p 00000000 00:00 0 
+7f85ac4c6000-7f85ac5c6000 ---p 00000000 00:00 0 
+7f85ac5c6000-7f85ac651000 rw-p 00000000 00:00 0 
+7f85ac651000-7f85aca07000 ---p 00000000 00:00 0 
+7f85aca07000-7f85aca21000 r-xp 00000000 00:32 1061901                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libzip.so
+7f85aca21000-7f85acc21000 ---p 0001a000 00:32 1061901                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libzip.so
+7f85acc21000-7f85acc22000 r--p 0001a000 00:32 1061901                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libzip.so
+7f85acc22000-7f85acc23000 rw-p 0001b000 00:32 1061901                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libzip.so
+7f85acc23000-7f85acc2e000 r-xp 00000000 08:05 398899                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f85acc2e000-7f85ace2d000 ---p 0000b000 08:05 398899                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f85ace2d000-7f85ace2e000 r--p 0000a000 08:05 398899                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f85ace2e000-7f85ace2f000 rw-p 0000b000 08:05 398899                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f85ace2f000-7f85ace35000 rw-p 00000000 00:00 0 
+7f85ace35000-7f85ace4c000 r-xp 00000000 08:05 398893                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f85ace4c000-7f85ad04b000 ---p 00017000 08:05 398893                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f85ad04b000-7f85ad04c000 r--p 00016000 08:05 398893                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f85ad04c000-7f85ad04d000 rw-p 00017000 08:05 398893                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f85ad04d000-7f85ad04f000 rw-p 00000000 00:00 0 
+7f85ad04f000-7f85ad05a000 r-xp 00000000 08:05 398910                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f85ad05a000-7f85ad259000 ---p 0000b000 08:05 398910                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f85ad259000-7f85ad25a000 r--p 0000a000 08:05 398910                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f85ad25a000-7f85ad25b000 rw-p 0000b000 08:05 398910                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f85ad25b000-7f85ad263000 r-xp 00000000 08:05 398895                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f85ad263000-7f85ad463000 ---p 00008000 08:05 398895                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f85ad463000-7f85ad464000 r--p 00008000 08:05 398895                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f85ad464000-7f85ad465000 rw-p 00009000 08:05 398895                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f85ad465000-7f85ad46f000 r-xp 00000000 00:32 1061920                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libinstrument.so
+7f85ad46f000-7f85ad66e000 ---p 0000a000 00:32 1061920                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libinstrument.so
+7f85ad66e000-7f85ad66f000 r--p 00009000 00:32 1061920                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libinstrument.so
+7f85ad66f000-7f85ad670000 rw-p 0000a000 00:32 1061920                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libinstrument.so
+7f85ad670000-7f85ad69d000 r-xp 00000000 00:32 1061910                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libjava.so
+7f85ad69d000-7f85ad89c000 ---p 0002d000 00:32 1061910                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libjava.so
+7f85ad89c000-7f85ad89d000 r--p 0002c000 00:32 1061910                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libjava.so
+7f85ad89d000-7f85ad89f000 rw-p 0002d000 00:32 1061910                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libjava.so
+7f85ad89f000-7f85ad8ac000 r-xp 00000000 00:32 1061907                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libverify.so
+7f85ad8ac000-7f85adaab000 ---p 0000d000 00:32 1061907                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libverify.so
+7f85adaab000-7f85adaad000 r--p 0000c000 00:32 1061907                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libverify.so
+7f85adaad000-7f85adaae000 rw-p 0000e000 00:32 1061907                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/libverify.so
+7f85adaae000-7f85adab5000 r-xp 00000000 08:05 398950                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f85adab5000-7f85adcb4000 ---p 00007000 08:05 398950                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f85adcb4000-7f85adcb5000 r--p 00006000 08:05 398950                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f85adcb5000-7f85adcb6000 rw-p 00007000 08:05 398950                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f85adcb6000-7f85ade53000 r-xp 00000000 08:05 398872                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f85ade53000-7f85ae052000 ---p 0019d000 08:05 398872                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f85ae052000-7f85ae053000 r--p 0019c000 08:05 398872                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f85ae053000-7f85ae054000 rw-p 0019d000 08:05 398872                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f85ae054000-7f85aed36000 r-xp 00000000 00:32 1577211                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/server/libjvm.so
+7f85aed36000-7f85aef36000 ---p 00ce2000 00:32 1577211                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/server/libjvm.so
+7f85aef36000-7f85aefcc000 r--p 00ce2000 00:32 1577211                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/server/libjvm.so
+7f85aefcc000-7f85aeffd000 rw-p 00d78000 00:32 1577211                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/jre/lib/amd64/server/libjvm.so
+7f85aeffd000-7f85af038000 rw-p 00000000 00:00 0 
+7f85af038000-7f85af21f000 r-xp 00000000 08:05 398809                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f85af21f000-7f85af41f000 ---p 001e7000 08:05 398809                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f85af41f000-7f85af423000 r--p 001e7000 08:05 398809                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f85af423000-7f85af425000 rw-p 001eb000 08:05 398809                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f85af425000-7f85af429000 rw-p 00000000 00:00 0 
+7f85af429000-7f85af42c000 r-xp 00000000 08:05 398832                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f85af42c000-7f85af62b000 ---p 00003000 08:05 398832                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f85af62b000-7f85af62c000 r--p 00002000 08:05 398832                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f85af62c000-7f85af62d000 rw-p 00003000 08:05 398832                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f85af62d000-7f85af644000 r-xp 00000000 00:32 1577203                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/lib/amd64/jli/libjli.so
+7f85af644000-7f85af843000 ---p 00017000 00:32 1577203                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/lib/amd64/jli/libjli.so
+7f85af843000-7f85af844000 r--p 00016000 00:32 1577203                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/lib/amd64/jli/libjli.so
+7f85af844000-7f85af845000 rw-p 00017000 00:32 1577203                    /home/ernani/.sdkman/candidates/java/8.0.191-oracle/lib/amd64/jli/libjli.so
+7f85af845000-7f85af85f000 r-xp 00000000 08:05 398942                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f85af85f000-7f85afa5e000 ---p 0001a000 08:05 398942                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f85afa5e000-7f85afa5f000 r--p 00019000 08:05 398942                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f85afa5f000-7f85afa60000 rw-p 0001a000 08:05 398942                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f85afa60000-7f85afa64000 rw-p 00000000 00:00 0 
+7f85afa64000-7f85afa8b000 r-xp 00000000 08:05 398781                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f85afb6f000-7f85afb70000 ---p 00000000 00:00 0 
+7f85afb70000-7f85afb73000 ---p 00000000 00:00 0 
+7f85afb73000-7f85afc72000 rw-p 00000000 00:00 0 
+7f85afc7f000-7f85afc87000 rw-s 00000000 08:05 839733                     /tmp/hsperfdata_ernani/10981
+7f85afc87000-7f85afc88000 rw-p 00000000 00:00 0 
+7f85afc88000-7f85afc89000 r--p 00000000 00:00 0 
+7f85afc89000-7f85afc8b000 rw-p 00000000 00:00 0 
+7f85afc8b000-7f85afc8c000 r--p 00027000 08:05 398781                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f85afc8c000-7f85afc8d000 rw-p 00028000 08:05 398781                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f85afc8d000-7f85afc8e000 rw-p 00000000 00:00 0 
+7ffe6a333000-7ffe6a35a000 rw-p 00000000 00:00 0                          [stack]
+7ffe6a3b9000-7ffe6a3bc000 r--p 00000000 00:00 0                          [vvar]
+7ffe6a3bc000-7ffe6a3be000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dendpoints.shutdown.enabled=true -Denv=development -Dfull.stacktrace=false -Dgrails.env=development -Dgrails.full.stacktrace=false -Dinfo.app.grailsVersion=3.3.5 -Dinfo.app.name=obi-journey-site -Dinfo.app.version=0.1 -Djdk.reflect.allowGetCallerClass=true -Drun.active=true -Dserver.port=5000 -Dspring.output.ansi.enabled=always -Dspring.profiles.active -Dspringloaded=inclusions=grails.plugins..*;synchronize=true;allowSplitPackages=true;cacheDir=/home/ernani/dev/obi-journey-site/build/springloaded -Dverbose=false -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:CICompilerCount=3 -javaagent:/home/ernani/.gradle/caches/modules-2/files-2.1/org.springframework/springloaded/1.2.8.RELEASE/b60bac05b0451cdc1863bfec617f39aa0dcaaa43/springloaded-1.2.8.RELEASE.jar -Xverify:none -Xms768m -Xmx768m -Dfile.encoding=UTF-8 -Duser.country=BR -Duser.language=pt -Duser.variant 
+java_command: obi.journey.site.Application
+java_class_path (initial): /home/ernani/dev/obi-journey-site/src/main/resources:/home/ernani/dev/obi-journey-site/grails-app/views:/home/ernani/dev/obi-journey-site/grails-app/i18n:/home/ernani/dev/obi-journey-site/grails-app/conf:/home/ernani/dev/obi-journey-site/build/classes/main:/home/ernani/dev/obi-journey-site/build/resources/main:/home/ernani/dev/obi-journey-site/gsp-classes:/home/ernani/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.5.12.RELEASE/88b9a16ff87f0a7faec7848e9a5626ffbbac588f/spring-boot-starter-logging-1.5.12.RELEASE.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.12.RELEASE/932ab2609793ebc00576cbae77085bb83e5c9008/spring-boot-autoconfigure-1.5.12.RELEASE.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-core/3.3.5/8044ecc48da9a8427953ffb1b7fe0a169b5b75eb/grails-core-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/1.5.12.RELEASE/492b2762b659ff66970bda22802d06e1b4ce9f5b/spring-boot-starter-actuator-1.5.12.RELEASE.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-web-boot/3.3.5/96b9ec5a3904970ecb1dd5d2d783bb54e46339f/grails-web-boot-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-logging/3.3.5/cd27aad74b27447d2aebe1a85b4fbc89af2d3c3d/grails-logging-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-rest/3.3.5/225fd803f4047cf880ec8c16227f38fa0e53d630/grails-plugin-rest-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-databinding/3.3.5/91a4ae7fbd038eb5fbee5b3d6f2ae6291c562d34/grails-plugin-databinding-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-i18n/3.3.5/5c35bb21615ea91332f9abce3f64a34daec6c182/grails-plugin-i18n-3.3.5.jar:/home/ernani/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.3.5/5cbba2
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/ernani/.sdkman/candidates/java/current
+PATH=/home/ernani/.sdkman/candidates/java/current/bin:/home/ernani/.sdkman/candidates/groovy/current/bin:/home/ernani/.sdkman/candidates/grails/current/bin:/home/ernani/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x907b70], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGTERM: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGQUIT: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=LinuxMint
+DISTRIB_RELEASE=19
+DISTRIB_CODENAME=tara
+DISTRIB_DESCRIPTION="Linux Mint 19 Tara"
+
+uname:Linux 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 11607, NOFILE 4096, AS infinity
+load average:5.26 3.07 1.88
+
+/proc/meminfo:
+MemTotal:        3034256 kB
+MemFree:          307092 kB
+MemAvailable:     421448 kB
+Buffers:           10360 kB
+Cached:           351876 kB
+SwapCached:            0 kB
+Active:          2321372 kB
+Inactive:         247608 kB
+Active(anon):    2208292 kB
+Inactive(anon):   132520 kB
+Active(file):     113080 kB
+Inactive(file):   115088 kB
+Unevictable:          40 kB
+Mlocked:              40 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              3472 kB
+Writeback:             0 kB
+AnonPages:       2206784 kB
+Mapped:           227176 kB
+Shmem:            134012 kB
+Slab:              92008 kB
+SReclaimable:      43232 kB
+SUnreclaim:        48776 kB
+KernelStack:        7856 kB
+PageTables:        25568 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1517128 kB
+Committed_AS:    5218888 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      128300 kB
+DirectMap2M:     2977792 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-1
+cpu_memory_nodes: 0
+active_processor_count: 2
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 2632204288
+memory_max_usage_in_bytes: 1280151552
+
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core CPU       T4200  @ 2.00GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 1995.003
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl cpuid aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm pti dtherm
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 3990.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Pentium(R) Dual-Core CPU       T4200  @ 2.00GHz
+stepping	: 10
+microcode	: 0xa07
+cpu MHz		: 1995.003
+cache size	: 1024 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts rep_good nopl cpuid aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm pti dtherm
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 3990.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3034256k(305852k free), swap 0k(0k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.191-b12) for linux-amd64 JRE (1.8.0_191-b12), built on Oct  6 2018 05:43:09 by "java_re" with gcc 7.3.0
+
+time: Mon Dec 24 14:51:36 2018
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

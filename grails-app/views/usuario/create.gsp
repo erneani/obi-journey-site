@@ -12,7 +12,7 @@
           <fieldset class="form">
             <div class="form-group">
               <label for="nome" class="form-label">Nome</label>
-              <input type="text" name="nome" class="form-input-block" placeholder="Digite aqui seu nome" />
+              <input type="text" name="nome" class="form-input-block" placeholder="Digite aqui seu nome" required/>
             </div>
             <div class="form-group">
               <label for="email" class="form-label">Email</label>
@@ -50,7 +50,7 @@
             <g:hiddenField name="caminho" value="1" />
             <g:hiddenField name="experiencia" value="0" />
             <div class="form-group">
-              <g:submitButton name="create-user" class="submit-button" value="Cadastrar"/>
+              <g:submitButton name="criar-usuario" class="submit-button" value="Cadastrar"/>
             </div>
           </fieldset>
         </g:form>

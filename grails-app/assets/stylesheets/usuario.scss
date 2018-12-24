@@ -9,6 +9,8 @@
   .hero-title {
     @include normalizeFont($font-size-title, $font-weight-bold, $color-white);
     @include centralizeComponent();
+    padding: 10px 50px;
+    border: 2px solid $color-white;
   }
 }
 

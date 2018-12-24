@@ -92,7 +92,7 @@ hibernate:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: create
             driverClassName: org.h2.Driver
             username: sa
             password: ''

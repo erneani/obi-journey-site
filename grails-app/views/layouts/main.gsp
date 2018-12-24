@@ -19,7 +19,7 @@
 <body>
 
     <!-- Main navigation -->
-
+    
     <nav class="main-nav">
         <div class="nav-logo">
             <div class="nav-logo-wrapper">
@@ -47,21 +47,38 @@
                 <g:if test="${session.usuario}">
                     <li class="nav-list-element">
                         <g:link controller="usuario" action="index" class="user-info-box">
-                            <label class="user-info-name">${session.usuario.nome}</label>
+                            <label class="info-name">${session.usuario.nome}</label>
                         </g:link>
                     </li>
                     <li class="nav-list-element">
-                        <g:link controller="usuario" action="logout" class="user-info-box">Sair</g:link>
+                        <g:link controller="usuario" action="logout" class="user-info-box">
+                            <label class="info-name">Sair</label>
+                        </g:link>
                     </li>
                 </g:if>
                 <g:else>
-                    <li class="nav-list-element">
-                      <g:link controller="usuario" action="login" class="call-button">Entrar</g:link>
-                    </li>
-                    <li class="nav-list-element">
-                      <g:link controller="usuario" action="create" class="call-button">Cadastrar</g:link>
-                    </li>      
+                    <g:if test="${session.gerente}">
+                        <li class="nav-list-element">
+                            <g:link controller="gerente" action="index" class="admin-info-box">
+                                <label class="info-name">${session.gerente.nome}</label>
+                            </g:link>
+                            <li class="nav-list-element">
+                                <g:link controller="gerente" action="logout" class="admin-info-box">
+                                    <label class="info-name">Sair</label>
+                                </g:link>
+                            </li>
+                        </li>
+                    </g:if>
+                    <g:else>
+                        <li class="nav-list-element">
+                          <g:link controller="usuario" action="login" class="call-button">Entrar</g:link>
+                        </li>
+                        <li class="nav-list-element">
+                          <g:link controller="usuario" action="create" class="call-button">Cadastrar</g:link>
+                        </li>      
+                    </g:else>
                 </g:else>
+                
             </ul>
         </div>
 

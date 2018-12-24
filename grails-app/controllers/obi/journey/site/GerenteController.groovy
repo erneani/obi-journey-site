@@ -9,6 +9,32 @@ class GerenteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def login() {
+        render view:'login'
+    }
+
+    def authenticate() {
+        def gerente = Gerente.findByEmail(params.email)
+        def senha = Gerente.findBySenha(params.senha)
+
+        if(gerente && senha) {
+            session.gerente = gerente
+            redirect(view:'index', model:[gerente: new Gerente(params)])
+        }
+        else {
+            flash.error = "Email ou senha incorretos"
+            render(view:'login', model:[active: 'usuario'])
+        }
+    }
+
+    def logout() {
+        if(session.gerente) {
+            session.gerente = null
+            redirect action:'login', model:[flash.message = "Você saiu!"]
+        }
+
+    }
+
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond gerenteService.list(params), model:[gerenteCount: gerenteService.count()]
@@ -19,6 +45,10 @@ class GerenteController {
     }
 
     def create() {
+        if(!session.gerente) {
+            render view:'login'
+        }
+
         respond new Gerente(params)
     }
 
@@ -30,6 +60,8 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
+            respond gerente, [view:'login']
+            return 
         } catch (ValidationException e) {
             respond gerente.errors, view:'create'
             return

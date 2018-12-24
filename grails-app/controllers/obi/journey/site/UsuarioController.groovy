@@ -14,21 +14,17 @@ class UsuarioController {
     }
 
     def checkLogin() {
-        println("Chcked")
-      def usuario = Usuario.findByEmail(params.email)
-      def senha = Usuario.findBySenha(params.senha)
+        def usuario = Usuario.findByEmail(params.email)
+        def senha = Usuario.findBySenha(params.senha)
 
-      if(usuario && senha) {
-        println("Login ok")
-
-        session.usuario = usuario
-        redirect(view:'index', model:[usuario: new Usuario(params)])
-      }
-      else {
-        flash.message = "Email ou senha não estão corretos."
-        flash.error = true
-        render view: 'login', model: [active: 'usuario']
-      }
+        if(usuario && senha) {
+            session.usuario = usuario
+            redirect(view:'index', model:[usuario: new Usuario(params)])
+        }
+        else {
+            flash.error = "Email ou senha não estão corretos."
+            render view: 'login', model: [active: 'usuario']
+        }
     }
 
     def logout() {
@@ -77,9 +73,8 @@ class UsuarioController {
         }
 
         try {
-            println(params)
             usuarioService.save(usuario)
-            respond usuario, [view:'login']
+            respond usuario, [view:'login', model:[flash.message = "Cadastro realizado com sucesso!"]]
             return
         } catch (ValidationException e) {
             usuario.errors.allErrors.each {
