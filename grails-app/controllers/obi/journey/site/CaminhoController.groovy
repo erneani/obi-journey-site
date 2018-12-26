@@ -29,6 +29,7 @@ class CaminhoController {
         }
 
         try {
+            printl("Trying to save")
             caminhoService.save(caminho)
         } catch (ValidationException e) {
             respond caminho.errors, view:'create'

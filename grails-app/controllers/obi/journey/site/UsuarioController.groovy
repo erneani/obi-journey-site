@@ -19,10 +19,10 @@ class UsuarioController {
 
         if(usuario && senha) {
             session.usuario = usuario
-            redirect(view:'index', model:[usuario: new Usuario(params)])
+            redirect view:'index', model:[usuario: new Usuario(params)]
         }
         else {
-            flash.error = "Email ou senha não estão corretos."
+            flash.error = "Email ou senha não estão corretos"
             render view: 'login', model: [active: 'usuario']
         }
     }

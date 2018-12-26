@@ -17,7 +17,7 @@
                     <input type="text" name="nome" class="form-input-block" placeholder="Qual é o seu nome?" required/>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="form-label">Senha:</label>
+                    <label for="email" class="form-label">Email:</label>
                     <input type="email" name="email" class="form-input-block" placeholder="Qual o seu melhor email?" required/>
                 </div>
                 <div class="form-group">

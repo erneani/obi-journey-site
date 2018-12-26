@@ -14,3 +14,71 @@
   }
 }
 
+.section {
+  background-color: $color-white;
+  flex-direction: column;
+  display: flex;
+  padding: 3rem 2rem;
+
+  .card-wrapper {
+    justify-content: space-around;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+
+.section-title {
+  @include normalizeFont($font-size-title, $font-weight-bold, $color-black);
+  margin: auto 0;
+}
+
+.section-header {
+  justify-content: space-between;
+  display: inline-flex;
+}
+
+%card {
+  @include normalizeFont($font-size-medium,$font-weight-normal,$color-white);
+  background-color: $color-black;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: 1px 1px 10px $color-black-lo;
+  transition: $transition-duration ease-in;
+  max-width: 275px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  cursor: pointer;
+
+  .card-title {
+    font-weight: $font-weight-bold;
+    text-align: center;
+    font-size: $font-size-extra;
+    margin: 0.75 auto;
+  }
+
+  .card-level {
+    text-align: center;
+    font-size: $font-size-level;
+    margin: auto auto;
+  }
+
+  .card-image {
+    min-width: 250px;
+    max-width: 280px;
+  }
+
+  .card-description {
+    margin: 0.75 auto;
+    text-align: center;
+  }
+
+  &:hover {
+    box-shadow: 3px 3px 15px $color-black-lo;
+  }
+}
+
+.card-green {
+  @extend %card;
+  background-color: $color-primary;
+}

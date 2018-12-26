@@ -9,6 +9,7 @@ $color-secondary-light:       #5c5cce;
 $color-white:                 #fff;
 $color-gray-light:            #ccc;
 $color-black:                 #363636;
+$color-black-lo:			  rgba(21,21,21,0.5);
 $color-blue-light:            #4db9ff;
 $color-blue:                  #202081;
 $color-blue-dark:             #202046;
@@ -28,6 +29,8 @@ $font-size-medium:            16px;        //16px
 $font-size-large:             18px;        //18px
 $font-size-extra:             22px;        //22px
 $font-size-title:             36px;        //36px
+$font-size-ultra: 			  48px;		   //48px
+$font-size-level:			  100px;	   //100px
 
 $font-weight-light:           300;
 $font-weight-normal:          400;
@@ -95,7 +98,7 @@ $z-force:					  100;
 .call-button {
 	@include normalizeFont($font-size-medium,$font-weight-bold,$color-primary);
 	@extend %button;
-	padding: 0.5rem 1rem;
+	padding: 0.25rem 1rem;
 	border: 2px solid $color-primary;
 	border-radius: 20px;
 
@@ -230,8 +233,6 @@ $z-force:					  100;
 	}
 }
 
-.admin
-
 %div-message {
 	background-color: $color-black;
 	justify-content: center;
@@ -257,4 +258,21 @@ $z-force:					  100;
 .div-success-message {
 	@extend %div-message;
 	background-color: $color-green-dark-ho;
+}
+
+.add {
+	@include normalizeFont($font-size-title, $font-weight-bold, $color-primary);
+	padding: 1.5rem 1.5rem;
+	border: 2px solid $color-primary;
+	margin: 0 2rem;
+	transition: $transition-duration ease-out;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white;
+	}
+}
+
+.greenlize {
+	color: $color-primary;
 }

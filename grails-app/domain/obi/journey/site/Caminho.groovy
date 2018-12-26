@@ -1,10 +1,11 @@
 package obi.journey.site
 
 class Caminho {
-	int id_caminho
 	String nome
+    String descricao
+    String estoria
 	int nivel
-	int estagio
+	int estagios
 	
     static constraints = {
     	id_caminho(nullable:false, blank:false, unique:true)

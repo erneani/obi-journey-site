@@ -5,9 +5,16 @@ import static org.springframework.http.HttpStatus.*
 
 class GerenteController {
 
+    CaminhoService caminhoService
     GerenteService gerenteService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+    def authorization() {
+        if(!session.gerente) {
+            respond view:'login', model:[flash.error = "Você precisa estar logado para continuar"]
+        }
+    }
 
     def login() {
         render view:'login'
@@ -19,11 +26,11 @@ class GerenteController {
 
         if(gerente && senha) {
             session.gerente = gerente
-            redirect(view:'index', model:[gerente: new Gerente(params)])
+            redirect view:'index', model:[gerente: new Gerente(params)]
         }
         else {
-            flash.error = "Email ou senha incorretos"
-            render(view:'login', model:[active: 'usuario'])
+            println("Erro no login")
+            redirect action:'login', model:[flash.error = "Email ou senha incorretos"]
         }
     }
 
@@ -45,9 +52,6 @@ class GerenteController {
     }
 
     def create() {
-        if(!session.gerente) {
-            render view:'login'
-        }
 
         respond new Gerente(params)
     }
@@ -60,10 +64,10 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
-            respond gerente, [view:'login']
+            respond gerente, [view:'index', model:[flash.message = "Gerente criado com sucesso"]]
             return 
         } catch (ValidationException e) {
-            respond gerente.errors, view:'create'
+            respond gerente.errors, [view:'create', model:[flash.message = "Cadastro realizado com sucesso!"]]
             return
         }
 
@@ -88,6 +92,7 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
+            respond 
         } catch (ValidationException e) {
             respond gerente.errors, view:'edit'
             return
