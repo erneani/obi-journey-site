@@ -132,4 +132,4 @@ environments:
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
 server:
-    port: 5000
+    port: 8080
