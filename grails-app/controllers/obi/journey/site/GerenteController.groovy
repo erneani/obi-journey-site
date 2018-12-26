@@ -20,6 +20,10 @@ class GerenteController {
     }
 
     def authenticate() {
+        if (session.usuario) {
+            session.usuario = null
+        }
+
         def gerente = Gerente.findByEmail(params.email)
         def senha = Gerente.findBySenha(params.senha)
 
@@ -41,6 +45,7 @@ class GerenteController {
     }
 
     def index(Integer max) {
+        authorization()
         params.max = Math.min(max ?: 10, 100)
         def p = Prova.list()
         respond gerenteService.list(params), model:[gerenteCount: gerenteService.count(), provaList:p]
@@ -51,6 +56,7 @@ class GerenteController {
     }
 
     def create() {
+        authorization()
         respond new Gerente(params)
     }
 
@@ -62,13 +68,13 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
-            if (session.gerente) { 
+            if (session.gerente) {
                 respond gerente, [view:'index', model:[flash.message = "Gerente criado com sucesso"]]
             }
             else {
                 respond gerente, [view:'login', model:[flash.message = "Gerente criado com sucesso"]]
             }
-            return 
+            return
         } catch (ValidationException e) {
             respond gerente.errors, [view:'create', model:[flash.message = "Cadastro realizado com sucesso!"]]
             return
@@ -87,7 +93,7 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
-            respond 
+            respond
         } catch (ValidationException e) {
             respond gerente.errors, view:'edit'
             return

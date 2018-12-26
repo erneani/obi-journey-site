@@ -24,7 +24,7 @@
 	width: 100%;
 	z-index: $z-force;
 
-	/* 
+	/*
 	height: 7.5rem;
 	box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
 	*/
@@ -69,7 +69,7 @@
 }
 
 .hero-background {
-	background-image: url("../images/crianca-feliz.jpg");
+	background-image: url("https://cdn.pixabay.com/photo/2016/11/14/03/16/book-1822474_960_720.jpg");
 	height: auto;
 	background-position: center center;
 	.hero-background-filter {
@@ -81,7 +81,7 @@
 		.hero-text {
 			margin: auto auto;
 			text-align: center;
-			padding: 20rem;
+			padding: 10rem;
 
 			.hero-title{
 		    	color: #fff;

@@ -70,6 +70,38 @@
                 <img src="https://via.placeholder.com/450x300" alt="An image">
               </div>
             </div>
+            <div class="what-we-do-card">
+            <div class="what-we-do-card-content-wrapper">
+                <h3 class="what-we-do-card-title">
+                  ESTRUTURA DE UMA QUESTÃO
+                </h3>
+                <p class="what-we-do-card-text">
+                  <b>Cenário: </b>introduz conjuntos de variáveis (pessoas, locais, coisas, eventos,  etc.).
+                <p class="what-we-do-card-text">
+                  <b>Regras: </b>conjunto de declarações que descrevem as relações entre as variáveis.
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Posicionamento: </b>associa um objeto a uma posição específica de um arranjo ordenado. Usado em questões de ordenação.
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Atribuição: </b>associa objetos a grupos distintos. Usado em questões de agrupamento.
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Sequeciamento: </b>indica uma relação de ordem, do tipo antes-depois, entre objetos de um arranjo ordenado. Usado em questões de ordenação.
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Combinação: </b>indica uma relação do tipo junto-separado, entre objetos dentro de um grupo ou um arranjo ordenado. Usado em questões de ordenação e agrupamento. 
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Condicional: </b>indica uma relação condicional, do tipo se-então, entre objetos de grupos ou de arranjos ordenados. Usado em questões de ordenação e agrupamento. 
+                </p>
+                <p class="what-we-do-card-text">
+                  <b>Perguntas: </b>conjunto de perguntas relacionadas às variáveis e às regras.
+                </p>
+              </div>
+            </div>
+            
+
         </div>
   </div>
     </body>

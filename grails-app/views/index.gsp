@@ -31,60 +31,45 @@
          <asset:image src="pc.png" />
        </div>
        <h2 class="service-card-title">
-         Praticidade
+         Simples
        </h2>
        <p class="service-card-description">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-         sed do eiusmod tempor incididunt.
+         Uma plataforma para todas as idades.
        </p>
-       <a class="simple-button">
-         Conheça mais
-       </a>
      </div>
      <div class="service-card" data-aos="fade-down">
        <div class="service-card-image-wrapper">
          <asset:image src="pc.png" />
        </div>
        <h2 class="service-card-title">
-         Praticidade
+         Prático
        </h2>
        <p class="service-card-description">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-         sed do eiusmod tempor incididunt.
+          aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaa
        </p>
-       <a class="simple-button">
-         Conheça mais
-       </a>
      </div>
      <div class="service-card" data-aos="fade-down">
        <div class="service-card-image-wrapper">
          <asset:image src="pc.png" />
        </div>
        <h2 class="service-card-title">
-         Praticidade
+         Moderno
        </h2>
        <p class="service-card-description">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-         sed do eiusmod tempor incididunt.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
        </p>
-       <a class="simple-button">
-         Conheça mais
-       </a>
      </div>
      <div class="service-card" data-aos="fade-down">
        <div class="service-card-image-wrapper">
          <asset:image src="pc.png" />
        </div>
        <h2 class="service-card-title">
-         Praticidade
+         Interativo
        </h2>
        <p class="service-card-description">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-         sed do eiusmod tempor incididunt.
+         loreknsdjsd ksbnizdwsbi bisbu
        </p>
-       <a class="simple-button">
-         Conheça mais
-       </a>
+
      </div>
 	</div>
   <div class="exams">
@@ -92,8 +77,7 @@
       Nossas últimas provas
     </h2>
     <p class="exams-description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
     </p>
     <div class="exams-carousel">
       <div class="exams-carousel-item">
@@ -107,7 +91,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="call-box-section">
     <h3 class="call-box-section-title">Que tal começar agora?</h3>
     <div class="call-boxes">
@@ -151,7 +135,7 @@
               Lorem ipsum dolor sit amet
             </li>
             <li>
-              O rato roeu a roupa do rei de roma
+              O rato roeu a roupa do rei de
             </li>
             <li>
               O rei roeu a roupa do rato

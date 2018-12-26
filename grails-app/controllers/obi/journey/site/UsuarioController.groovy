@@ -14,6 +14,10 @@ class UsuarioController {
     }
 
     def checkLogin() {
+        if (session.gerente) {
+            session.gerente = null
+        }
+
         def usuario = Usuario.findByEmail(params.email)
         def senha = Usuario.findBySenha(params.senha)
 
