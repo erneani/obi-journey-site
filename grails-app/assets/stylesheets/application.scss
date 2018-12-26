@@ -176,6 +176,10 @@
 		margin: 3rem 0;
 		color: $color-black;
 
+		.what-we-do-card-image-wrapper {
+			margin: auto;
+		}
+
 		.what-we-do-card-content-wrapper {
 	    justify-content: space-around;
 	    flex-direction: column;

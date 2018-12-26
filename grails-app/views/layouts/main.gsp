@@ -35,14 +35,13 @@
         <div class="nav-list">
             <ul>
                 <li class="nav-list-element">
-                  <g:link controller="usuario" action="home" class="commom-button">Home</g:link>
-                  <!--<a class="commom-button" href="#">Home</a>-->
+                  <g:link controller="usuario" action="home" class="commom-button">Início</g:link>
                 </li>
                 <li class="nav-list-element">
-                  <a class="commom-button" href="#">About</a>
+                  <g:link controller="usuario" action="about" class="commom-button">Sobre</g:link>
                 </li>
                 <li class="nav-list-element">
-                  <a class="commom-button" href="#">Journey</a>
+                    <g:link class="commom-button" controller="caminho" action="index">A Jornada</g:link>
                 </li>
                 <g:if test="${session.usuario}">
                     <li class="nav-list-element">

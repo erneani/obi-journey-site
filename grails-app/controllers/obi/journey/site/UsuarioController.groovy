@@ -36,7 +36,8 @@ class UsuarioController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond usuarioService.list(params), model:[usuarioCount: usuarioService.count()]
+        def p = Prova.list()
+        respond usuarioService.list(params), model:[usuarioCount: usuarioService.count(), provaList: p]
     }
 
     def show(Long id) {
@@ -148,5 +149,9 @@ class UsuarioController {
 
     def home() {
         render view:'/index'
+    }
+
+    def about() {
+        render view:'/about'
     }
 }

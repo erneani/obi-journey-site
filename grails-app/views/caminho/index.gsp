@@ -9,5 +9,8 @@
         <div class="hero">
             <h1 class="hero-title">O caminho</h1>
         </div>
+        <div class="section">
+            <div class="road"></div>
+        </div>
     </body>
 </html>

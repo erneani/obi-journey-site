@@ -30,6 +30,7 @@ class ProvaController {
 
         try {
             provaService.save(prova)
+            respond controller:'gerente', view:'index', model:[flash.message = "Prova criada com sucesso!"]
         } catch (ValidationException e) {
             respond prova.errors, view:'create'
             return

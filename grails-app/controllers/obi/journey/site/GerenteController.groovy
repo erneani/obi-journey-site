@@ -5,14 +5,13 @@ import static org.springframework.http.HttpStatus.*
 
 class GerenteController {
 
-    CaminhoService caminhoService
     GerenteService gerenteService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def authorization() {
         if(!session.gerente) {
-            respond view:'login', model:[flash.error = "Você precisa estar logado para continuar"]
+            render view:'login', model:[flash.error = "Você precisa estar logado para continuar"]
         }
     }
 
@@ -37,14 +36,14 @@ class GerenteController {
     def logout() {
         if(session.gerente) {
             session.gerente = null
-            redirect action:'login', model:[flash.message = "Você saiu!"]
+            redirect action:"login", model: [flash.message = "Você saiu!"]
         }
-
     }
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond gerenteService.list(params), model:[gerenteCount: gerenteService.count()]
+        def p = Prova.list()
+        respond gerenteService.list(params), model:[gerenteCount: gerenteService.count(), provaList:p]
     }
 
     def show(Long id) {
@@ -52,7 +51,6 @@ class GerenteController {
     }
 
     def create() {
-
         respond new Gerente(params)
     }
 
@@ -64,19 +62,16 @@ class GerenteController {
 
         try {
             gerenteService.save(gerente)
-            respond gerente, [view:'index', model:[flash.message = "Gerente criado com sucesso"]]
+            if (session.gerente) { 
+                respond gerente, [view:'index', model:[flash.message = "Gerente criado com sucesso"]]
+            }
+            else {
+                respond gerente, [view:'login', model:[flash.message = "Gerente criado com sucesso"]]
+            }
             return 
         } catch (ValidationException e) {
             respond gerente.errors, [view:'create', model:[flash.message = "Cadastro realizado com sucesso!"]]
             return
-        }
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'gerente.label', default: 'Gerente'), gerente.id])
-                redirect gerente
-            }
-            '*' { respond gerente, [status: CREATED] }
         }
     }
 
